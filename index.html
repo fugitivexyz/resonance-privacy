@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resonance - Privacy Policy</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.6; color: #1d1d1f; background: #fff; padding: 2rem 1rem; }
+        .container { max-width: 720px; margin: 0 auto; }
+        h1 { font-size: 2rem; margin-bottom: 0.25rem; }
+        h2 { font-size: 1.35rem; margin-top: 2rem; margin-bottom: 0.75rem; border-bottom: 1px solid #e5e5e7; padding-bottom: 0.4rem; }
+        h3 { font-size: 1.1rem; margin-top: 1.25rem; margin-bottom: 0.5rem; }
+        p { margin-bottom: 1rem; }
+        .meta { color: #86868b; font-size: 0.95rem; margin-bottom: 2rem; }
+        .summary { background: #f5f5f7; border-radius: 12px; padding: 1.25rem; margin-bottom: 2rem; font-size: 0.95rem; }
+        table { width: 100%; border-collapse: collapse; margin: 1rem 0; font-size: 0.95rem; }
+        th, td { text-align: left; padding: 0.6rem 0.75rem; border-bottom: 1px solid #e5e5e7; }
+        th { font-weight: 600; background: #f5f5f7; }
+        ul, ol { margin: 0.5rem 0 1rem 1.5rem; }
+        li { margin-bottom: 0.35rem; }
+        strong { font-weight: 600; }
+        .highlight { background: #fff8e1; border-left: 3px solid #d4a04a; padding: 0.75rem 1rem; border-radius: 0 8px 8px 0; margin: 1rem 0; font-size: 0.95rem; }
+        hr { border: none; border-top: 1px solid #e5e5e7; margin: 2rem 0; }
+        @media (prefers-color-scheme: dark) {
+            body { background: #1d1d1f; color: #f5f5f7; }
+            .summary, th { background: #2d2d2f; }
+            table, th, td, hr, h2 { border-color: #424245; }
+            .highlight { background: #2d2a1f; border-color: #d4a04a; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Privacy Policy</h1>
+        <p class="meta">App: Resonance &middot; Effective Date: March 27, 2026</p>
+
+        <div class="summary">
+            <strong>The short version:</strong> Your data stays on your device. The developer does not collect, store, or have access to any of your recordings, transcripts, or notes. There is no account, no analytics, and no advertising.
+        </div>
+
+        <h2>Introduction</h2>
+        <p>Resonance is a meeting notes app that records audio, transcribes it, and uses AI to generate enhanced notes. This policy explains what data the app handles, where it lives, and who can access it.</p>
+
+        <h2>Information We Collect</h2>
+        <p>Resonance does not collect information about you. All data the app handles is created by you and stored on your device or your own cloud accounts.</p>
+        <p>The app stores the following data locally:</p>
+        <table>
+            <thead>
+                <tr><th>Data</th><th>Where It Lives</th></tr>
+            </thead>
+            <tbody>
+                <tr><td>Audio recordings (.m4a files)</td><td>App's Documents directory on device</td></tr>
+                <tr><td>Meeting transcripts</td><td>SwiftData database on device</td></tr>
+                <tr><td>AI-enhanced meeting notes</td><td>SwiftData database on device</td></tr>
+                <tr><td>Chat messages with AI</td><td>SwiftData database on device</td></tr>
+                <tr><td>Custom vocabulary terms</td><td>SwiftData database on device</td></tr>
+                <tr><td>App preferences and settings</td><td>iOS UserDefaults on device</td></tr>
+                <tr><td>API keys for third-party services</td><td>iOS Keychain on device</td></tr>
+            </tbody>
+        </table>
+        <p>API keys are stored in the iOS Keychain and are never logged, transmitted to the developer, or shared with any party other than the specific service they belong to.</p>
+
+        <h2>How Your Data Is Stored</h2>
+        <p><strong>On-device storage</strong> is the default for everything. Audio files, transcripts, and notes remain in the app's sandboxed storage unless you explicitly configure a cloud-based AI service.</p>
+        <p><strong>iCloud sync</strong> is handled automatically by CloudKit if you have iCloud enabled on your device. This syncs your meeting data across your own Apple devices using your personal Apple ID. The developer has no access to your iCloud data.</p>
+        <p><strong>API keys</strong> are stored exclusively in the iOS Keychain. They are sent only to the service they authenticate &mdash; for example, your OpenAI key is sent only to OpenAI's servers when you use that integration.</p>
+
+        <h2>Third-Party Services</h2>
+        <p>Resonance supports multiple AI backends. All third-party integrations are opt-in. The app works fully on-device without configuring any external service.</p>
+
+        <h3>On-Device Only (no data leaves your device)</h3>
+        <ul>
+            <li><strong>Apple Speech Recognition</strong> &mdash; Apple's on-device speech framework. Apple's privacy policy applies.</li>
+            <li><strong>WhisperKit</strong> &mdash; An on-device machine learning model for transcription. Audio never leaves your device.</li>
+            <li><strong>Apple Foundation Models</strong> &mdash; An on-device large language model for note enhancement. Data never leaves your device.</li>
+            <li><strong>Ollama</strong> &mdash; A local server you run yourself on your own machine or network. Data stays within your local network.</li>
+        </ul>
+
+        <h3>Cloud APIs (data sent to third-party servers when configured)</h3>
+        <p>When you configure a cloud API, relevant data is sent to that provider's servers according to their own privacy policies.</p>
+        <table>
+            <thead>
+                <tr><th>Service</th><th>What Is Sent</th></tr>
+            </thead>
+            <tbody>
+                <tr><td>OpenAI (Whisper + GPT)</td><td>Audio files and/or transcripts</td></tr>
+                <tr><td>Groq</td><td>Audio files</td></tr>
+                <tr><td>Google Gemini</td><td>Transcripts and notes</td></tr>
+                <tr><td>Anthropic Claude</td><td>Transcripts and notes</td></tr>
+                <tr><td>OpenRouter</td><td>Transcripts and notes</td></tr>
+                <tr><td>Custom endpoints</td><td>Data you choose to send; your responsibility</td></tr>
+            </tbody>
+        </table>
+        <p>You can review each provider's privacy policy on their respective websites. Resonance does not control how these providers handle your data once it reaches their servers.</p>
+
+        <div class="highlight">
+            <strong>None of these integrations are enabled by default.</strong> You must explicitly enter an API key to activate any cloud service. If you do not enter an API key, no data is ever sent to these services.
+        </div>
+
+        <h2>Data Sharing</h2>
+        <p>The developer does not share, sell, license, or monetize your data in any way. There are no advertising networks, analytics services, or data brokers involved.</p>
+        <p>Data leaves your device only when:</p>
+        <ol>
+            <li>You have iCloud sync enabled (your data goes to your own Apple iCloud account)</li>
+            <li>You have configured a cloud AI API (data goes to that specific provider)</li>
+            <li>You have configured the Ollama integration (data goes to your own local server)</li>
+        </ol>
+
+        <h2>Children's Privacy</h2>
+        <p>Resonance does not knowingly collect data from anyone, including children under the age of 13. Because the developer collects no data at all, the app does not present special risks with respect to children's privacy. If you are a parent and have concerns about this app, please contact us using the information below.</p>
+
+        <h2>Changes to This Policy</h2>
+        <p>If this privacy policy changes materially, the updated policy will be made available with a new effective date. Continuing to use the app after a policy update constitutes acceptance of the revised terms.</p>
+
+        <h2>Contact</h2>
+        <p>For questions about this privacy policy, contact:</p>
+        <p><strong>Developer:</strong> Pragnesh<br>
+        <strong>Bundle ID:</strong> com.engn.resonance</p>
+    </div>
+</body>
+</html>
